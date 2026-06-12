@@ -1,0 +1,22 @@
+{
+  "comments": [
+    "This product completely transformed my experience highly recommend",
+    "honestly not that great, had some real issues with the build quality",
+    "Transformed my daily routine, recommend this to everyone I know",
+    "returned mine after two weeks, quality was genuinely disappointing",
+    "Best product I have ever used, transformed everything completely",
+    "its fine i guess, nothing amazing but does the job okay enough",
+    "Cannot recommend enough, changed my life completely no regrets at all",
+    "took forever to arrive and the packaging was completely damaged too",
+    "Absolutely transformed my experience with this incredible product wow",
+    "would maybe buy again, decent enough product for the price point"
+  ],
+  "timestamps": [1000,3600,1001,7200,1002,9800,1003,14400,1001,18000],
+  "mentions": [
+    ["@botaccount1","@botaccount2"],[],
+    ["@botaccount1","@botaccount2"],["@realuser1"],
+    ["@botaccount1"],[],
+    ["@botaccount2","@botaccount1"],[],
+    ["@botaccount1"],[]
+  ]
+}

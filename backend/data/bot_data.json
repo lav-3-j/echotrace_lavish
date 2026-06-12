@@ -1,0 +1,37 @@
+{
+  "comments": [
+    "This product completely transformed my experience, highly recommend to everyone",
+    "Absolutely love this product, it has changed my life significantly",
+    "Transformed my daily routine, highly recommend this to everyone I know",
+    "Best purchase I have ever made, it transformed everything for me honestly",
+    "This product changed my life, I recommend it to all my friends always",
+    "Incredible product that transformed my experience, highly recommend buying",
+    "Life changing product honestly, everyone should buy this immediately today",
+    "Completely transformed my routine, best product I have ever used period",
+    "Highly recommend this product to everyone, it changed my life completely",
+    "Everyone needs this product, it transformed my experience fully no doubt",
+    "Cannot recommend this enough, product transformed my daily life forever",
+    "Amazing product that completely changed my experience for the better always",
+    "This transformed everything for me, highly recommend to all my friends",
+    "Best product ever made, it completely transformed my entire daily routine",
+    "Strongly recommend this life changing product to everyone I personally know"
+  ],
+  "timestamps": [1000,1001,1002,1001,1003,1001,1002,1001,1004,1002,1001,1003,1002,1001,1002],
+  "mentions": [
+    ["@shopbot1","@ampnode2"],
+    ["@shopbot1","@ampnode3"],
+    ["@ampnode2","@ampnode3"],
+    ["@shopbot1","@ampnode2","@ampnode3"],
+    ["@shopbot1","@ampnode2"],
+    ["@ampnode2","@ampnode3"],
+    ["@shopbot1","@ampnode3"],
+    ["@shopbot1","@ampnode2"],
+    ["@ampnode2","@ampnode3"],
+    ["@shopbot1","@ampnode2","@ampnode3"],
+    ["@shopbot1","@ampnode2"],
+    ["@ampnode3","@shopbot1"],
+    ["@ampnode2","@shopbot1"],
+    ["@shopbot1","@ampnode2","@ampnode3"],
+    ["@ampnode2","@ampnode3"]
+  ]
+}

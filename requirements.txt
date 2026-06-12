@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+sentence-transformers
+vaderSentiment
+networkx
+numpy
+google-generativeai
+python-dotenv
