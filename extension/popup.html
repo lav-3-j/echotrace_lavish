@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EchoTrace</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="3" fill="#7c3aed"/>
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#7c3aed" opacity="0.4"/>
+            <path d="M12 6v2M12 16v2M6 12H4M20 12h-2" stroke="#7c3aed" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="logo-name">EchoTrace</div>
+          <div class="logo-sub">Synthetic Content Detector</div>
+        </div>
+      </div>
+      <div class="settings-btn" id="settingsBtn" title="Settings">⚙</div>
+    </div>
+
+    <!-- Settings Panel (hidden by default) -->
+    <div id="settingsPanel" class="settings-panel hidden">
+      <label class="settings-label">Gemini API Key</label>
+      <input type="password" id="apiKeyInput" class="api-input" placeholder="AIza..." />
+      <button class="save-btn" id="saveApiKey">Save Key</button>
+      <div id="apiStatus" class="api-status"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent">
+      <!-- Not Reddit screen -->
+      <div id="notReddit" class="state-screen hidden">
+        <div class="state-icon">🌐</div>
+        <div class="state-text">Navigate to a Reddit page to analyze content</div>
+      </div>
+
+      <!-- Ready to scan -->
+      <div id="readyState" class="state-screen hidden">
+        <div class="page-info" id="pageInfo"></div>
+        <button class="analyze-btn" id="analyzeBtn">
+          <span class="btn-icon">🔍</span>
+          Analyze with EchoTrace
+        </button>
+        <div class="hint">Scans comments for bot-like behavior patterns</div>
+      </div>
+
+      <!-- Loading -->
+      <div id="loadingState" class="state-screen hidden">
+        <div class="loader-wrap">
+          <div class="pulse-ring"></div>
+          <div class="loader-dot"></div>
+        </div>
+        <div class="loading-text">Extracting page data...</div>
+        <div class="loading-sub" id="loadingStep">Scanning comment patterns</div>
+      </div>
+
+      <!-- Results -->
+      <div id="resultsState" class="state-screen hidden">
+        <!-- Score Card -->
+        <div class="score-card" id="scoreCard">
+          <div class="score-label">Synthetic Activity Score</div>
+          <div class="score-circle-wrap">
+            <svg class="score-ring" viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#1e1b4b" stroke-width="10"/>
+              <circle cx="60" cy="60" r="50" fill="none" stroke-width="10"
+                stroke-linecap="round"
+                stroke-dasharray="314"
+                stroke-dashoffset="314"
+                id="scoreArc"
+                transform="rotate(-90 60 60)"
+              />
+            </svg>
+            <div class="score-value" id="scoreValue">0%</div>
+          </div>
+          <div class="score-verdict" id="scoreVerdict"></div>
+        </div>
+
+        <!-- Breakdown -->
+        <div class="breakdown" id="breakdown"></div>
+
+        <!-- Gemini Analysis -->
+        <div class="gemini-section" id="geminiSection">
+          <div class="gemini-header">
+            <span class="gemini-icon">✨</span>
+            <span>Gemini AI Analysis</span>
+            <span class="gemini-badge">AI</span>
+          </div>
+          <div class="gemini-body" id="geminiBody">
+            <div class="gemini-loading">
+              <span class="dot-bounce">●</span><span class="dot-bounce" style="animation-delay:.2s">●</span><span class="dot-bounce" style="animation-delay:.4s">●</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Re-scan -->
+        <button class="rescan-btn" id="rescanBtn">↺ Re-scan</button>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
